@@ -426,6 +426,21 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.10.tgz#e4b3e255a1b4aea84f6e1d2ae0b73f826c3785bd"
   integrity sha512-9KpxSVFCu0iK1owoez6aC/s/EdUQLDN3adTxGCqxMVhrPDj6bt5dbrHDXUuq+Bs2vATFBBrQS5vdQ/Ed2P+nbw==
 
+"@fontsource/lobster@^5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/lobster/-/lobster-5.2.8.tgz#603f9a2548d16fe3d103bc88c538710985fac7ca"
+  integrity sha512-5xlo4rcvefhac1tnwingFR9OT9wZYUVwlm4Iemx21flMCH8Z7mS4bNHosUtoRodPB8KLLFgywfjUbyt5rNRLng==
+
+"@fontsource/satisfy@^5.2.7":
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/satisfy/-/satisfy-5.2.7.tgz#c052b32154297db34679633181b41409d6954656"
+  integrity sha512-nCryyRwgppe04BV6WcaaL9x52AsF3VrJ06rBW6wOz+7xqwqJRaw6fy69bW86kmL/NanEfraFDciMm9IDUGoqEg==
+
+"@fontsource/twinkle-star@^5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/twinkle-star/-/twinkle-star-5.2.8.tgz#8f2e12b8a1a33c8dd5288e7c649c5debab851c11"
+  integrity sha512-zaurm+x4T/Bl3yO6dZz9hySbH6OUPdDyl9QbP3XYHUj7eZr2ZG64wFyOIhIqdJwc8umUZkWeBa+Q8+A1WIAIGw==
+
 "@img/colour@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@img/colour/-/colour-1.0.0.tgz#d2fabb223455a793bf3bf9c70de3d28526aa8311"

@@ -1,8 +1,10 @@
 ---
 import { Center, Lism } from 'lism-css/react';
+import bottles from '../assets/bottles.jpg';
+import '@fontsource/satisfy';
 ---
 
-<Center g='10' h="100vh" fdc>
-  <Lism fz='l'>TEXT</Lism>
-  <Lism fz='s'>Lorem ipsum dolor sit amet.</Lism>
+<Center g='10' bg_={{bgi:`url(${bottles.src})`, bg:'#7f7f7f', bgp:'center', bgsz:'cover', bbm:"multiply"}} bg="#595959" h="100vh" fdc>
+  <Lism fz='2xl' c="white" ff="satisfy">Whisky speciality BAR</Lism>
+  <Lism fz='5xl' c="white" ff="satisfy">BAR MOMO</Lism>
 </Center>
