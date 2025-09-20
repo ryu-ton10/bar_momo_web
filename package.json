@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "astro": "^5.13.9",
-    "biome": "^0.3.3"
+    "biome": "^0.3.3",
+    "lism-css": "^0.3.4"
   },
   "devDependencies": {
     "@biomejs/biome": "^2.2.4"
