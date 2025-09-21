@@ -1,42 +1,82 @@
 ---
-import { Center, Grid, GridItem, Lism, Text } from 'lism-css/react';
-import gallery_one from '../assets/gallery_1.jpg';
-import gallery_two from '../assets/gallery_2.jpg';
-import gallery_three from '../assets/gallery_3.jpg';
-import gallery_four from '../assets/gallery_4.jpg';
+import { Center, Container, Media, Text } from 'lism-css/react';
 import '@fontsource/noto-serif-jp';
 ---
 
 <Center g='10' bg='linear-gradient(to top, #0074ff 0%, #0f2d49 100%)' pt="80" pb="80" fdc>
-  <Lism fz='4xl' c="white" ff="Noto Serif JP" pb="50">- Contept -</Lism>
-  <Grid variant='repeat' cols='4' w="80%" pt="50">
-    <GridItem gc="span 2"><img src={gallery_one.src} alt='' /></GridItem>
-    <GridItem p='20' gc='span 2' layout={Center}>
-      <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word">
-        BAR MOMO は、ウィスキーを思う存分楽しめる空間です。ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです<br>
-        Here is a Whisky speciality BAR. Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
-      </Text>
-    </GridItem>
-    <GridItem p='20' gc='span 2' layout={Center}>
-      <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word">
-        BAR MOMO は、ウィスキーを思う存分楽しめる空間です。ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです<br>
-        Here is a Whisky speciality BAR. Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
-      </Text>
-    </GridItem>
-    <GridItem gc="span 2"><img src={gallery_two.src} alt='' /></GridItem>
-    <GridItem gc="span 2"><img src={gallery_three.src} alt='' /></GridItem>
-    <GridItem p='20' gc='span 2' layout={Center}>
-      <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word">
-        BAR MOMO は、ウィスキーを思う存分楽しめる空間です。ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです<br>
-        Here is a Whisky speciality BAR. Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
-      </Text>
-    </GridItem>
-    <GridItem p='20' gc='span 2' layout={Center}>
-      <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word">
-        BAR MOMO は、ウィスキーを思う存分楽しめる空間です。ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです<br>
-        Here is a Whisky speciality BAR. Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
-      </Text>
-    </GridItem>
-    <GridItem gc="span 2"><img src={gallery_four.src} alt='' /></GridItem>
-  </Grid>
+  <Text fz='4xl' c="white" ff="Noto Serif JP" pb="50">- Contept -</Lism>
+  <div class="swiper">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <Media src="https://d25git93u2lj6d.cloudfront.net/gallery_1.jpg" alt="Slide 1" />
+      </div>
+      <div class="swiper-slide">
+        <Media src="https://d25git93u2lj6d.cloudfront.net/gallery_2.jpg" alt="Slide 1" />
+      </div>
+      <div class="swiper-slide">
+        <Media src="https://d25git93u2lj6d.cloudfront.net/gallery_3.jpg" alt="Slide 1" />
+      </div>
+      <div class="swiper-slide">
+        <Media src="https://d25git93u2lj6d.cloudfront.net/gallery_4.jpg" alt="Slide 1" />
+      </div>
+    </div>
+    </div>
+  </div>
+  <Text fz='2xl' c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center">
+    BAR MOMO は、ウィスキーを思う存分楽しめる空間です。<br>ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです
+  </Text>
+  <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center">
+    Here is a Whisky speciality BAR.<br>Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
+  </Text>
 </Center>
+
+<style>
+.swiper {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  padding-bottom: 50px;
+}
+.swiper-wrapper {
+  transition-timing-function: linear;
+}
+.swiper-slide {
+  width: 100%;
+  gap: 10px;
+  height: auto;
+}
+</style>
+
+<script>
+  import Swiper from 'swiper';
+  import { Navigation, Pagination, Autoplay, EffectFade } from 'swiper/modules';
+  import 'swiper/css/bundle';
+
+  export const swiperConfig = {
+    modules: [Autoplay, Navigation, Pagination, EffectFade],
+    // Optional parameters
+    loop: true,
+
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true,
+    },
+    speed: 2000,
+  };
+
+  export const swiper = new Swiper('.swiper', {
+    modules: [Autoplay, Navigation, Pagination, EffectFade],
+    loop: true,
+    speed: 8000, // 追記
+
+    autoplay: {
+      delay: 0,
+      disableOnInteraction: false,
+    },
+  });
+</script>
