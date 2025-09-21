@@ -426,10 +426,20 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.25.10.tgz#e4b3e255a1b4aea84f6e1d2ae0b73f826c3785bd"
   integrity sha512-9KpxSVFCu0iK1owoez6aC/s/EdUQLDN3adTxGCqxMVhrPDj6bt5dbrHDXUuq+Bs2vATFBBrQS5vdQ/Ed2P+nbw==
 
+"@fontsource/hina-mincho@^5.2.8":
+  version "5.2.8"
+  resolved "https://registry.yarnpkg.com/@fontsource/hina-mincho/-/hina-mincho-5.2.8.tgz#57c47717d8c4a308b5147de0e2fbb0433354923a"
+  integrity sha512-+1O9wHTiPaeJDLj8iK0kfhDm+orKcmEqCK91RZjcVaP1ZfWtUzv19xmF+8X9sJ25PLAV1D48ouDiT4eHXMz3BA==
+
 "@fontsource/lobster@^5.2.8":
   version "5.2.8"
   resolved "https://registry.yarnpkg.com/@fontsource/lobster/-/lobster-5.2.8.tgz#603f9a2548d16fe3d103bc88c538710985fac7ca"
   integrity sha512-5xlo4rcvefhac1tnwingFR9OT9wZYUVwlm4Iemx21flMCH8Z7mS4bNHosUtoRodPB8KLLFgywfjUbyt5rNRLng==
+
+"@fontsource/noto-serif-jp@^5.2.7":
+  version "5.2.7"
+  resolved "https://registry.yarnpkg.com/@fontsource/noto-serif-jp/-/noto-serif-jp-5.2.7.tgz#90b9244a8f2d22d22dc8935f1bfda1308ffd724d"
+  integrity sha512-uC8j75EoZe/s1LR+qzKCi7pXxQgY3Jbb0vpX9UOuzTOewMyPZd6zgQD64uxPo52qPPWkA+U1t4d/27KwKJoOCw==
 
 "@fontsource/satisfy@^5.2.7":
   version "5.2.7"

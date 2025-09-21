@@ -1,0 +1,42 @@
+---
+import { Center, Grid, GridItem, Lism, Text } from 'lism-css/react';
+import gallery_one from '../assets/gallery_1.jpg';
+import gallery_two from '../assets/gallery_2.jpg';
+import gallery_three from '../assets/gallery_3.jpg';
+import gallery_four from '../assets/gallery_4.jpg';
+import '@fontsource/noto-serif-jp';
+---
+
+<Center g='10' bg='linear-gradient(to top, #0074ff 0%, #0f2d49 100%)' pt="80" pb="80" fdc>
+  <Lism fz='4xl' c="white" ff="Noto Serif JP" pb="50">- Contept -</Lism>
+  <Grid variant='repeat' cols='4' w="80%" pt="50">
+    <GridItem gc="span 2"><img src={gallery_one.src} alt='' /></GridItem>
+    <GridItem p='20' gc='span 2' layout={Center}>
+      <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word">
+        BAR MOMO は、ウィスキーを思う存分楽しめる空間です。ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです<br>
+        Here is a Whisky speciality BAR. Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
+      </Text>
+    </GridItem>
+    <GridItem p='20' gc='span 2' layout={Center}>
+      <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word">
+        BAR MOMO は、ウィスキーを思う存分楽しめる空間です。ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです<br>
+        Here is a Whisky speciality BAR. Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
+      </Text>
+    </GridItem>
+    <GridItem gc="span 2"><img src={gallery_two.src} alt='' /></GridItem>
+    <GridItem gc="span 2"><img src={gallery_three.src} alt='' /></GridItem>
+    <GridItem p='20' gc='span 2' layout={Center}>
+      <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word">
+        BAR MOMO は、ウィスキーを思う存分楽しめる空間です。ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです<br>
+        Here is a Whisky speciality BAR. Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
+      </Text>
+    </GridItem>
+    <GridItem p='20' gc='span 2' layout={Center}>
+      <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word">
+        BAR MOMO は、ウィスキーを思う存分楽しめる空間です。ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです<br>
+        Here is a Whisky speciality BAR. Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
+      </Text>
+    </GridItem>
+    <GridItem gc="span 2"><img src={gallery_four.src} alt='' /></GridItem>
+  </Grid>
+</Center>
