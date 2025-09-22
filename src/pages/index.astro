@@ -5,16 +5,25 @@ import Footer from '../components/Footer.astro';
 import MasterIntroduction from '../components/MasterIntroduction.astro';
 import Title from '../components/Title.astro';
 import Layout from '../layouts/Layout.astro';
+import Loading from '../components/Loading.astro';
 ---
 
 <Layout>
-	<Title />
+	<Title client:load>
+		<Loading />
+	</Title>
 	<Description client:load>
-		<div slot="fallback">Loading</div>
+		<Loading />
 	</Description>
-	<MasterIntroduction />
-	<Access />
-	<Footer />
+	<MasterIntroduction client:load>
+		<Loading />
+	</MasterIntroduction>
+	<Access client:load>
+		<Loading />
+	</Access>
+	<Footer client:load>
+		<Loading />
+	</Footer>
 </Layout>
 
 <style>
