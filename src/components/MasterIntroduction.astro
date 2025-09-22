@@ -1,16 +1,18 @@
 ---
-import { Center, Grid, GridItem, Text } from 'lism-css/react';
+import { Center, Text, Media, WithSide, Box } from 'lism-css/react';
 import '@fontsource/noto-serif-jp';
 import '@fontsource/satisfy';
 ---
 
 <Center g='10' bg='linear-gradient(to top, #ae85a0 0%, #DDAACC 100%)' pt="80" pb="80" fdc>
-  <Text fz='4xl' c="white" ff="Noto Serif JP" pb="50">- Bar Master Introduction -</Text>
-  <Grid variant='repeat' cols='3' w="80%" pt="50">
-    <GridItem><img src="https://d25git93u2lj6d.cloudfront.net/gallery_1.jpg" alt='' /></GridItem>
-    <GridItem p='20' gc='span 2' layout={Center}>
-      <Text fz='5xl' c="white" ff="satisfy">Momoko Kazama</Text>
-      <Text fz='xl' c="white" ff="Noto Serif JP" ovw="break-word" p="50">「竹鶴」をこよなく愛するバーテンダー。スコッチウィスキーを中心にお酒を嗜んでいる。</Text>
-    </GridItem>
-  </Grid>
+  <Text fz='4xl' c="white" ff="Noto Serif JP" pb="50" ta="c">- Bar Master -</Text>
+  <WithSide sideW='30rem' mainW='15rem' g='30' jc="c" ai="c" p="0 50">
+    <Box p='20' maxW="xs">
+      <Media src="https://d25git93u2lj6d.cloudfront.net/gallery_1.jpg" alt='' />
+    </Box>
+    <Box data-is-side p='20'>
+      <Text fz='5xl' c="white" ff="satisfy" ta="c">Momoko Kazama</Text>
+      <Text fz='xl' c="white" ff="Noto Serif JP" ovw="break-word" p="50" ta="c">「竹鶴」をこよなく愛するバーテンダー。スコッチウィスキーを中心にお酒を嗜んでいる。</Text>
+    </Box>
+  </WithSide>
 </Center>
