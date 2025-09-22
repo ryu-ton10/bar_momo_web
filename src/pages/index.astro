@@ -16,3 +16,25 @@ import Layout from '../layouts/Layout.astro';
 	<Access />
 	<Footer />
 </Layout>
+
+<style>
+@keyframes toLeft {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes toRight {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  } to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+</style>

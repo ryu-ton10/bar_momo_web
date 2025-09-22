@@ -5,14 +5,14 @@ import '@fontsource/satisfy';
 ---
 
 <Center g='10' bg='linear-gradient(to top, #DDAACC 0%, #ae85a0 100%)' pt="70" pb="70" fdc>
-  <Text className="master__title" c="white" ff="Noto Serif JP" pb="50" ta="c">- Bar Master -</Text>
+  <Text className="master__title" c="white" ff="Noto Serif JP" pb="50" ta="c" v="h">- Bar Master -</Text>
   <WithSide sideW='30rem' mainW='15rem' g='30' jc="c" ai="c" p="0 50">
     <Box p='20' maxW="xs">
-      <Media src="https://d25git93u2lj6d.cloudfront.net/gallery_1.jpg" alt='' />
+      <Media className="master__thumbnail" src="https://d25git93u2lj6d.cloudfront.net/gallery_1.jpg" alt='' v="h"/>
     </Box>
     <Box data-is-side p='20'>
-      <Text className="master__name" c="white" ff="satisfy" ta="c">Momoko Kazama</Text>
-      <Text className="master__description" c="white" ff="Noto Serif JP" ovw="break-word" p="50 0" ta="c">「竹鶴」をこよなく愛するバーテンダー。スコッチウィスキーを中心にお酒を嗜んでいる。</Text>
+      <Text className="master__name" c="white" ff="satisfy" ta="c" v="h">Momoko Kazama</Text>
+      <Text className="master__description" c="white" ff="Noto Serif JP" ovw="break-word" p="50 0" ta="c" v="h">「竹鶴」をこよなく愛するバーテンダー。スコッチウィスキーを中心にお酒を嗜んでいる。</Text>
     </Box>
   </WithSide>
 </Center>
@@ -41,3 +41,36 @@ import '@fontsource/satisfy';
   }
 }
 </style>
+
+<script>
+  const toggleFadeIn = () => {
+    const currentScrollY = window.scrollY;
+    const title = document.querySelectorAll('.master__title')[0] as HTMLDivElement;
+    const thumbnail = document.querySelectorAll('.master__thumbnail')[0] as HTMLDivElement;
+    const name = document.querySelectorAll('.master__name')[0] as HTMLDivElement;
+    const description = document.querySelectorAll('.master__description')[0] as HTMLDivElement;
+
+    const titleRect = title.getBoundingClientRect().top;
+    const thumbnailRect = thumbnail.getBoundingClientRect().top;
+    const nameRect = name.getBoundingClientRect().top;
+    const descriptionRect = description.getBoundingClientRect().top;
+
+    if (currentScrollY > titleRect) {
+      title.style.visibility = "visible";
+      title.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > thumbnailRect) {
+      thumbnail.style.visibility = "visible";
+      thumbnail.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > nameRect) {
+      name.style.visibility = "visible";
+      name.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > descriptionRect) {
+      description.style.visibility = "visible";
+      description.style.animation = "toLeft 2.5s forwards";
+    }
+  }
+  window.addEventListener('scroll', toggleFadeIn)
+</script>

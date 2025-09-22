@@ -4,13 +4,16 @@ import '@fontsource/satisfy';
 ---
 
 <Center g='10' bg_={{bgi:`url("https://d25git93u2lj6d.cloudfront.net/board.jpg")`, bg:'#7f7f7f', bgp:'center', bgsz:'cover', bbm:"multiply"}} bg="#595959" h="100vh" pt="70" pb="70" fdc>
-  <Text className="access__title" c="white" ff="Noto Serif JP" pb="50">- Access -</Text>
-  <Text className="access__name" c="white" ff="Noto Serif JP" pb="20">WHISKY BAR MOMO</Text>
-  <Text className="access__address" c="white" ff="Noto Serif JP" pb="30">〒131-0045 東京都墨田区押上１丁目２６−５ コーポ野村 101</Text>
+  <Text className="access__title" c="white" ff="Noto Serif JP" pb="50" v="h">- Access -</Text>
+  <Text className="access__name" c="white" ff="Noto Serif JP" pb="20" v="h">WHISKY BAR MOMO</Text>
+  <Text className="access__address" c="white" ff="Noto Serif JP" pb="30" v="h">〒131-0045 東京都墨田区押上１丁目２６−５ コーポ野村 101</Text>
   <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2544.7547635077644!2d139.81641352507071!3d35.70901894071625!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188f3f43fc8c2b%3A0x8a16ad8125d715ed!2zV0hJU0tZIEJBUiBNT01PKOODkOODvOODouODoik!5e0!3m2!1sja!2sjp!4v1758426843740!5m2!1sja!2sjp" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </Center>
 
 <style>
+#map {
+  visibility: hidden;
+}
 
 @media (min-width: 280px) {
   .access__title {
@@ -37,10 +40,40 @@ import '@fontsource/satisfy';
 </style>
 
 <script>
-const screenWidth = window.screen.availWidth;
-const screenHeight = window.screen.availHeight;
+  const screenWidth = window.screen.availWidth;
+  const screenHeight = window.screen.availHeight;
 
-const map = document.getElementById('map') as HTMLCanvasElement;
-map.width = screenWidth * 0.8;
-map.height = screenHeight * 0.6;
+  const map = document.getElementById('map') as HTMLCanvasElement;
+  map.width = screenWidth * 0.8;
+  map.height = screenHeight * 0.6;
+
+  const toggleFadeIn = () => {
+    const currentScrollY = window.scrollY;
+    const title = document.querySelectorAll('.access__title')[0] as HTMLDivElement;
+    const name = document.querySelectorAll('.access__name')[0] as HTMLDivElement;
+    const address = document.querySelectorAll('.access__address')[0] as HTMLDivElement;
+
+    const titleRect = title.getBoundingClientRect().top;
+    const nameRect = name.getBoundingClientRect().top;
+    const addressRect = address.getBoundingClientRect().top;
+    const mapRect = map.getBoundingClientRect().top;
+
+    if (currentScrollY > titleRect) {
+      title.style.visibility = "visible";
+      title.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > nameRect) {
+      name.style.visibility = "visible";
+      name.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > addressRect) {
+      address.style.visibility = "visible";
+      address.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > mapRect) {
+      map.style.visibility = "visible";
+      map.style.animation = "toLeft 2.5s forwards";
+    }
+  }
+  window.addEventListener('scroll', toggleFadeIn)
 </script>

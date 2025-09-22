@@ -4,7 +4,7 @@ import '@fontsource/noto-serif-jp';
 ---
 
 <Center g='10' bg='linear-gradient(to top, #0074ff 0%, #0f2d49 100%)' pt="70" pb="70" fdc>
-  <Text className="concept__title" c="white" ff="Noto Serif JP" pb="50">- Concept -</Lism>
+  <Text className="description__title" c="white" ff="Noto Serif JP" pb="50" v="h">- Concept -</Text>
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -22,10 +22,10 @@ import '@fontsource/noto-serif-jp';
     </div>
     </div>
   </div>
-  <Text className="description__text-jp" c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center">
+  <Text className="description__text-jp" c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center" v="h">
     BAR MOMO は、ウィスキーを思う存分楽しめる空間です。<br>ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです。
   </Text>
-  <Text className="description__text-en" c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center">
+  <Text className="description__text-en" c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center" v="h">
     Here is a Whisky speciality BAR.<br>Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
   </Text>
 </Center>
@@ -36,6 +36,7 @@ import '@fontsource/noto-serif-jp';
   height: auto;
   margin: 0 auto;
   padding-bottom: 50px;
+  visibility: hidden;
 }
 .swiper-wrapper {
   transition-timing-function: linear;
@@ -47,7 +48,7 @@ import '@fontsource/noto-serif-jp';
 }
 
 @media (min-width: 280px) {
-  .concept__title {
+  .description__title {
     font-size: 48px;
   }
   .description__text-jp {
@@ -58,7 +59,7 @@ import '@fontsource/noto-serif-jp';
   }
 }
 @media (min-width: 768px) {
-  .concept__title {
+  .description__title {
     font-size: 64px;
   }
   .description__text-jp {
@@ -102,4 +103,35 @@ import '@fontsource/noto-serif-jp';
       disableOnInteraction: false,
     },
   });
+
+  const toggleFadeIn = () => {
+    const currentScrollY = window.scrollY;
+    const title = document.querySelectorAll('.description__title')[0] as HTMLDivElement;
+    const swiper = document.querySelectorAll('.swiper')[0] as HTMLDivElement;
+    const textJp = document.querySelectorAll('.description__text-jp')[0] as HTMLDivElement;
+    const textEn = document.querySelectorAll('.description__text-en')[0] as HTMLDivElement;
+
+    const titleRect = title.getBoundingClientRect().top;
+    const swiperRect = swiper.getBoundingClientRect().top;
+    const textJpRect = textJp.getBoundingClientRect().top;
+    const textEnRect = textEn.getBoundingClientRect().top;
+
+    if (currentScrollY > titleRect) {
+      title.style.visibility = "visible";
+      title.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > swiperRect) {
+      swiper.style.visibility = "visible";
+      swiper.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > textJpRect) {
+      textJp.style.visibility = "visible";
+      textJp.style.animation = "toLeft 2.5s forwards";
+    }
+    if (currentScrollY > textEnRect) {
+      textEn.style.visibility = "visible";
+      textEn.style.animation = "toLeft 2.5s forwards";
+    }
+  }
+  window.addEventListener('scroll', toggleFadeIn)
 </script>

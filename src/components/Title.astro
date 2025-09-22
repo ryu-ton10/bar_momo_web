@@ -1,14 +1,21 @@
 ---
-import { Center, Text } from 'lism-css/react';
+import { Center, Text, Lism } from 'lism-css/react';
 import '@fontsource/satisfy';
 ---
 
 <Center g='10' bg_={{bgi:`url("https://d25git93u2lj6d.cloudfront.net/bottles.jpg")`, bg:'#7f7f7f', bgp:'center', bgsz:'cover', bbm:"multiply"}} bg="#595959" h="100vh" fdc>
   <Text className="title__text-sub" c="white" ff="satisfy" pb="10">Whisky speciality BAR</Text>
   <Text className="title__text-main" c="white" ff="satisfy">BAR MOMO</Text>
+  <Lism className="scroll"><span /></Lism>
 </Center>
 
 <style>
+  .title__text-main, .title__text-sub {
+    animation-name: fade-in;
+    animation-duration: 2.0s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
 @media (min-width: 280px) {
   .title__text-main {
     font-size: 72px;
@@ -23,6 +30,51 @@ import '@fontsource/satisfy';
   }
   .title__text-sub {
     font-size: 32px;
+  }
+}
+/* ロード完了時の文字のフェードインアニメーション */
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* スクロールを促すアイコン */
+.scroll {
+  padding-top: 50px;
+  color: white;
+}
+
+.scroll span {
+  position: absolute;
+  left: 50%;
+  width: 50px;
+  height: 50px;
+  margin-left: -30px;
+  border-left: 3px solid white;
+  border-bottom: 3px solid white;
+  transform: rotate(-45deg);
+  animation: go-scroll 2s infinite;
+  box-sizing: border-box;
+}
+
+/* 矢印を下に動かすアニメーション */
+@keyframes go-scroll {
+  0% {
+    transform: rotate(-45deg) translate(0, 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: rotate(-45deg) translate(-20px, 20px);
+    opacity: 0;
   }
 }
 </style>
