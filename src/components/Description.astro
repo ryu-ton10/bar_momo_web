@@ -3,8 +3,8 @@ import { Center, Media, Text } from 'lism-css/react';
 import '@fontsource/noto-serif-jp';
 ---
 
-<Center g='10' bg='linear-gradient(to top, #0074ff 0%, #0f2d49 100%)' pt="80" pb="80" fdc>
-  <Text fz='4xl' c="white" ff="Noto Serif JP" pb="50">- Concept -</Lism>
+<Center g='10' bg='linear-gradient(to top, #0074ff 0%, #0f2d49 100%)' pt="70" pb="70" fdc>
+  <Text className="concept__title" c="white" ff="Noto Serif JP" pb="50">- Concept -</Lism>
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -22,10 +22,10 @@ import '@fontsource/noto-serif-jp';
     </div>
     </div>
   </div>
-  <Text fz='2xl' c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center">
-    BAR MOMO は、ウィスキーを思う存分楽しめる空間です。<br>ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです
+  <Text className="description__text-jp" c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center">
+    BAR MOMO は、ウィスキーを思う存分楽しめる空間です。<br>ウィスキーが好きな方、ウィスキーについて勉強したい方にピッタリです。
   </Text>
-  <Text fz='l' c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center">
+  <Text className="description__text-en" c="white" ff="Noto Serif JP" ovw="break-word" p="20 50" ta="center">
     Here is a Whisky speciality BAR.<br>Not only enjoy Whisky but also get knowledge about Whisky in this BAR.
   </Text>
 </Center>
@@ -44,6 +44,29 @@ import '@fontsource/noto-serif-jp';
   width: 100%;
   gap: 10px;
   height: auto;
+}
+
+@media (min-width: 280px) {
+  .concept__title {
+    font-size: 48px;
+  }
+  .description__text-jp {
+    font-size: 18px;
+  }
+  .description__text-en {
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) {
+  .concept__title {
+    font-size: 64px;
+  }
+  .description__text-jp {
+    font-size: 27px;
+  }
+  .description__text-en {
+    font-size: 21px;
+  }
 }
 </style>
 

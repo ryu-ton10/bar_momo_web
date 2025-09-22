@@ -4,15 +4,40 @@ import '@fontsource/noto-serif-jp';
 import '@fontsource/satisfy';
 ---
 
-<Center g='10' bg='linear-gradient(to top, #ae85a0 0%, #DDAACC 100%)' pt="80" pb="80" fdc>
-  <Text fz='4xl' c="white" ff="Noto Serif JP" pb="50" ta="c">- Bar Master -</Text>
+<Center g='10' bg='linear-gradient(to top, #DDAACC 0%, #ae85a0 100%)' pt="70" pb="70" fdc>
+  <Text className="master__title" c="white" ff="Noto Serif JP" pb="50" ta="c">- Bar Master -</Text>
   <WithSide sideW='30rem' mainW='15rem' g='30' jc="c" ai="c" p="0 50">
     <Box p='20' maxW="xs">
       <Media src="https://d25git93u2lj6d.cloudfront.net/gallery_1.jpg" alt='' />
     </Box>
     <Box data-is-side p='20'>
-      <Text fz='5xl' c="white" ff="satisfy" ta="c">Momoko Kazama</Text>
-      <Text fz='xl' c="white" ff="Noto Serif JP" ovw="break-word" p="50" ta="c">「竹鶴」をこよなく愛するバーテンダー。スコッチウィスキーを中心にお酒を嗜んでいる。</Text>
+      <Text className="master__name" c="white" ff="satisfy" ta="c">Momoko Kazama</Text>
+      <Text className="master__description" c="white" ff="Noto Serif JP" ovw="break-word" p="50" ta="c">「竹鶴」をこよなく愛するバーテンダー。スコッチウィスキーを中心にお酒を嗜んでいる。</Text>
     </Box>
   </WithSide>
 </Center>
+
+<style>
+@media (min-width: 280px) {
+  .master__title {
+    font-size: 48px;
+  }
+  .master__name {
+    font-size: 48px;
+  }
+  .master__description {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  .master__title {
+    font-size: 64px;
+  }
+  .master__name {
+    font-size: 64px;
+  }
+  .master__description {
+    font-size: 24px;
+  }
+}
+</style>
