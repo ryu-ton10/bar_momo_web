@@ -89,3 +89,19 @@ import '@fontsource/satisfy';
     }
   }
 </style>
+
+<script>
+  const arrow = document.querySelector('.scroll');
+
+  if (arrow) {
+    arrow.addEventListener('click', () => {
+      const title = document.querySelectorAll('.description')[0] as HTMLDivElement;
+      const titleRect = title.getBoundingClientRect().top;
+
+      window.scrollTo({
+        top: titleRect,
+        behavior: 'smooth'
+      });
+    });
+  }
+</script>
