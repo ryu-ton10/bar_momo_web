@@ -53,11 +53,10 @@ import '@fontsource/satisfy';
   const map = document.getElementById('map') as HTMLCanvasElement;
   if (screenWidth < 768) {
     map.width = screenWidth * 0.9;
-    map.height = screenHeight * 0.6;
   } else {
     map.width = screenWidth * 0.6;
-    map.height = screenHeight * 0.4;
   }
+  map.height = screenHeight * 0.4;
 
   const toggleFadeIn = () => {
     const currentScrollY = window.scrollY;
