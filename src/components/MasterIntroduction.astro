@@ -1,45 +1,62 @@
 ---
-import { Center, Text, Media, WithSide, Box } from 'lism-css/react';
+import { Center, Text, Media, WithSide, Box, Flex } from 'lism-css/react';
 import '@fontsource/noto-serif-jp';
 import '@fontsource/satisfy';
 ---
 
 <Center g='10' bg='linear-gradient(to top, #DDAACC 0%, #ae85a0 100%)' pt="70" pb="70" fdc>
-  <Text className="master__title" c="white" ff="Noto Serif JP" pb="50" ta="c" v="h">- Bar Master -</Text>
-  <WithSide sideW='30rem' mainW='15rem' g='30' jc="c" ai="c" p="0 50">
-    <Box p='20' maxW="xs">
-      <Media className="master__thumbnail" src="https://d25git93u2lj6d.cloudfront.net/gallery_1.jpg" alt='' v="h"/>
-    </Box>
-    <Box data-is-side p='20'>
-      <Text className="master__name" c="white" ff="satisfy" ta="c" v="h">Momoko Kazama</Text>
-      <Text className="master__description" c="white" ff="Noto Serif JP" ovw="break-word" p="50 0" ta="c" v="h">「竹鶴」をこよなく愛するバーテンダー。スコッチウィスキーを中心にお酒を嗜んでいる。</Text>
-    </Box>
-  </WithSide>
+  <Text className="master__title" w="80vw" c="white" ff="Noto Serif JP" mb="50" v="h" bd="b" bdc="white" bdw="4px">Bartender</Text>
+  <div class="master__content">
+    <WithSide sideW='30rem' mainW='15rem' g='30' jc="c" ai="c" p="0 50" g="60">
+      <Flex p='20' maxW="s" flex jc="c">
+        <Media className="master__thumbnail" src="https://d25git93u2lj6d.cloudfront.net/gallery_1.jpg" alt='' v="h"/>
+      </Flex>
+      <Box data-is-side p='20'>
+        <Text className="master__name" c="white" ff="satisfy" ta="c" v="h">Momoko Kazama</Text>
+        <Text className="master__description" c="white" ff="Noto Serif JP" ovw="break-word" p="50 0" ta="c" v="h">「竹鶴」をこよなく愛するバーテンダー。スコッチウィスキーを中心にお酒を嗜んでいる。</Text>
+      </Box>
+    </WithSide>
+  </div>
 </Center>
 
 <style>
-@media (min-width: 280px) {
   .master__title {
-    font-size: 48px;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(.25turn, white, 50%, rgba(255, 255, 255, 0));
+    border-image-slice: 1;
   }
-  .master__name {
-    font-size: 36px;
+  @media (min-width: 280px) {
+    .master__content {
+      padding: 30px 30px;
+    }
+    .master__thumbnail {
+      width: 100%;
+      height: auto;
+    }
+    .master__title {
+      font-size: 48px;
+    }
+    .master__name {
+      font-size: 36px;
+    }
+    .master__description {
+      font-size: 14px;
+    }
   }
-  .master__description {
-    font-size: 14px;
+  @media (min-width: 768px) {
+    .master__content {
+      padding: 150px 50px;
+    }
+    .master__title {
+      font-size: 64px;
+    }
+    .master__name {
+      font-size: 64px;
+    }
+    .master__description {
+      font-size: 18px;
+    }
   }
-}
-@media (min-width: 768px) {
-  .master__title {
-    font-size: 64px;
-  }
-  .master__name {
-    font-size: 64px;
-  }
-  .master__description {
-    font-size: 24px;
-  }
-}
 </style>
 
 <script>

@@ -4,7 +4,7 @@ import '@fontsource/noto-serif-jp';
 ---
 
 <Center className="description" g='10' bg='linear-gradient(to top, #0074ff 0%, #0f2d49 100%)' pt="70" pb="70" fdc>
-  <Text className="description__title" c="white" ff="Noto Serif JP" pb="50" v="h">- Concept -</Text>
+  <Text className="description__title" w="80vw" c="white" ff="Noto Serif JP" mb="60" v="h" bd="b" bdw="4px">Concept</Text>
   <div class="swiper">
     <div class="swiper-wrapper">
       <div class="swiper-slide">
@@ -30,45 +30,50 @@ import '@fontsource/noto-serif-jp';
 </Center>
 
 <style>
-.swiper {
-  width: 100%;
-  max-width: 768px;
-  height: auto;
-  margin: 0 auto;
-  padding-bottom: 50px;
-  visibility: hidden;
-}
-.swiper-wrapper {
-  transition-timing-function: linear;
-}
-.swiper-slide {
-  width: 100%;
-  gap: 10px;
-  height: auto;
-}
-
-@media (min-width: 280px) {
   .description__title {
-    font-size: 48px;
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(.25turn, white, 50%, rgba(255, 255, 255, 0));
+    border-image-slice: 1;
   }
-  .description__text-jp {
-    font-size: 18px;
+  .swiper {
+    width: 100%;
+    max-width: 768px;
+    height: auto;
+    margin: 0 auto;
+    padding: 50px 0;
+    visibility: hidden;
   }
-  .description__text-en {
-    font-size: 12px;
+  .swiper-wrapper {
+    transition-timing-function: linear;
   }
-}
-@media (min-width: 768px) {
-  .description__title {
-    font-size: 64px;
+  .swiper-slide {
+    width: 100%;
+    gap: 10px;
+    height: auto;
   }
-  .description__text-jp {
-    font-size: 27px;
+  
+  @media (min-width: 280px) {
+    .description__title {
+      font-size: 48px;
+    }
+    .description__text-jp {
+      font-size: 18px;
+    }
+    .description__text-en {
+      font-size: 12px;
+    }
   }
-  .description__text-en {
-    font-size: 21px;
+  @media (min-width: 768px) {
+    .description__title {
+      font-size: 64px;
+    }
+    .description__text-jp {
+      font-size: 27px;
+    }
+    .description__text-en {
+      font-size: 21px;
+    }
   }
-}
 </style>
 
 <script>
