@@ -62,15 +62,15 @@ import '@fontsource/satisfy';
 <script>
   const toggleFadeIn = () => {
     const currentScrollY = window.scrollY;
-    const title = document.querySelectorAll('.master__title')[0] as HTMLDivElement;
-    const thumbnail = document.querySelectorAll('.master__thumbnail')[0] as HTMLDivElement;
-    const name = document.querySelectorAll('.master__name')[0] as HTMLDivElement;
-    const description = document.querySelectorAll('.master__description')[0] as HTMLDivElement;
+    const title = document.querySelector('.master__title') as HTMLDivElement;
+    const thumbnail = document.querySelector('.master__thumbnail') as HTMLDivElement;
+    const name = document.querySelector('.master__name') as HTMLDivElement;
+    const description = document.querySelector('.master__description') as HTMLDivElement;
 
-    const titleRect = title.getBoundingClientRect().top;
-    const thumbnailRect = thumbnail.getBoundingClientRect().top;
-    const nameRect = name.getBoundingClientRect().top;
-    const descriptionRect = description.getBoundingClientRect().top;
+    const titleRect = title.getBoundingClientRect().bottom;
+    const thumbnailRect = thumbnail.getBoundingClientRect().bottom;
+    const nameRect = name.getBoundingClientRect().bottom;
+    const descriptionRect = description.getBoundingClientRect().bottom;
 
     if (currentScrollY > titleRect) {
       title.style.visibility = "visible";

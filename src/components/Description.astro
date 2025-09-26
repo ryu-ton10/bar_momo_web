@@ -111,10 +111,10 @@ import '@fontsource/noto-serif-jp';
 
   const toggleFadeIn = () => {
     const currentScrollY = window.scrollY;
-    const title = document.querySelectorAll('.description__title')[0] as HTMLDivElement;
-    const swiper = document.querySelectorAll('.swiper')[0] as HTMLDivElement;
-    const textJp = document.querySelectorAll('.description__text-jp')[0] as HTMLDivElement;
-    const textEn = document.querySelectorAll('.description__text-en')[0] as HTMLDivElement;
+    const title = document.querySelector('.description__title') as HTMLDivElement;
+    const swiper = document.querySelector('.swiper') as HTMLDivElement;
+    const textJp = document.querySelector('.description__text-jp') as HTMLDivElement;
+    const textEn = document.querySelector('.description__text-en') as HTMLDivElement;
 
     const titleRect = title.getBoundingClientRect().top;
     const swiperRect = swiper.getBoundingClientRect().top;

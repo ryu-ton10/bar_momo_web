@@ -64,16 +64,16 @@ import '@fontsource/satisfy';
 
   const toggleFadeIn = () => {
     const currentScrollY = window.scrollY;
-    const title = document.querySelectorAll('.access__title')[0] as HTMLDivElement;
-    const name = document.querySelectorAll('.access__name')[0] as HTMLDivElement;
-    const address = document.querySelectorAll('.access__address')[0] as HTMLDivElement;
-    const schedule = document.querySelectorAll('.access__schedule')[0] as HTMLDivElement;
+    const title = document.querySelector('.access__title') as HTMLDivElement;
+    const name = document.querySelector('.access__name') as HTMLDivElement;
+    const address = document.querySelector('.access__address') as HTMLDivElement;
+    const schedule = document.querySelector('.access__schedule') as HTMLDivElement;
 
-    const titleRect = title.getBoundingClientRect().top;
-    const nameRect = name.getBoundingClientRect().top;
-    const addressRect = address.getBoundingClientRect().top;
-    const scheduleRect = schedule.getBoundingClientRect().top;
-    const mapRect = map.getBoundingClientRect().top;
+    const titleRect = title.getBoundingClientRect().bottom;
+    const nameRect = name.getBoundingClientRect().bottom;
+    const addressRect = address.getBoundingClientRect().bottom;
+    const scheduleRect = schedule.getBoundingClientRect().bottom;
+    const mapRect = map.getBoundingClientRect().bottom;
 
     if (currentScrollY > titleRect) {
       title.style.visibility = "visible";
